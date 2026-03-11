@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:15
+    container_name: finance_manager_db
+    restart: always
+    environment:
+      - POSTGRES_USER=finance_manager_user
+      - POSTGRES_PASSWORD=finance_manager_password
+      - POSTGRES_DB=finance_manager_db
+    ports:
+      - "5432:5432"

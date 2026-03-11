@@ -5,6 +5,8 @@ import java.time.LocalDate;
 import fincance_manager.model.enums.Type;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -27,6 +29,7 @@ public class Transaction {
     private String description;
     @Column(nullable = false)
     BigDecimal amount;
+    @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Type type;
     @Column(nullable = false)
